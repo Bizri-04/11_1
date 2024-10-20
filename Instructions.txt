@@ -1,1 +1,18 @@
 This File will contain all our instructions to our project.
+
+Instructions on how to run the HTML File:
+ 
+	1.	Open a Text Editor:
+	•	You can use any text editor like Notepad, TextEdit, VS Code, etc..
+	2.	Download the HTML File:
+	4.	Open in a Browser:
+	•	Locate the file where you saved it.
+	•	Double-click the file, or right-click it and choose Open with and select your preferred browser (e.g., Chrome, Firefox, Safari).
+	•	This will open the HTML page in the browser, displaying the header and the names in basic format.
+
+Instrucions on how on how to use the website (It might change in the future)
+
+- We have a navigation bar at the top of each page that will take us to 3 different pages, we have the home page which is the main page and then contact us and about us which will be edited later as well.
+- We have in the middle of the home page a welcome paragraph as they say to our website.
+- After it you can see 4 boxes which we will add out pictures on but for now we have our names instead, these pictures will take you to the student's portfolio of the one you pressed on.
+- Other features and buttons etc. will be added once we get more deep into the css part.
