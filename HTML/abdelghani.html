@@ -1,14 +1,202 @@
-<header>
-    <nav>
-        <a href="home.html">Home</a>
-        <div class="dropdown">
-            <a href="#">Portfolio ↓</a>
-            <div class="dropdown-content">
-                <a href="mohammad.html">Mohammad Tarek</a>
-                <a href="jamil.html">Jamil Bizri</a>
-                <a href="abdelghani.html">Abdelghani Masad</a>
-                <a href="ahmad.html">Ahmad Allan</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Abdelghani Masad</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #4a6b4a;
+            padding: 20px;
+            text-align: center;
+        }
+        header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+        .dropdown {
+            display: inline-block;
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #e0e0e0;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: #4a6b4a;
+            color: white;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .container {
+            display: flex;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .profile-pic {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin-right: 40px;
+            flex-shrink: 0;
+            border: 1px solid black;
+        }
+        .content {
+            flex: 1;
+        }
+        h2 {
+            color: #4a6b4a;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 5px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #e0e0e0;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+        .section {
+            margin-top: 20px;
+            font-size: large;
+        }
+        footer {
+            background-color: #4a6b4a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            bottom: 0;
+            width: 100%;
+        }
+        footer .contact-info {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        footer p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="home.html">Home</a>
+            <div class="dropdown">
+                <a href="#">Portfolio ↓</a>
+                <div class="dropdown-content">
+                    <a href="mohammad.html">Mohammad Tarek</a>
+                    <a href="jamil.html">Jamil Bizri</a>
+                    <a href="abdelghani.html">Abdelghani Masad</a>
+                    <a href="ahmad.html">Ahmad Allan</a>
+                </div>
             </div>
+            <a href="https://www.linkedin.com/in/abdelghani-masad/" target="_blank">LinkedIn</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <img src="/img/profile.jpg" alt="Profile Picture" class="profile-pic">
+
+        <div class="content">
+            <section class="section">
+                <h2>About Me</h2>
+                <p>Hello! I'm Abdelghani Masad, a passionate IT professional and a senior computer science student at the University of Sharjah, expected to graduate in May 2025. With a strong foundation in <strong>software engineering</strong>, <strong>cloud infrastructure</strong>, and <strong>artificial intelligence</strong>. I am dedicated to building efficient, scalable solutions. My expertise spans web development, machine learning, and project management. I thrive on creating applications that enhance productivity, automate tasks, and provide data-driven insights.</p>
+            </section>
+
+            <section class="section">
+                <h2>Experience</h2>
+                <ul>
+                    <li>
+                        <strong>IT Coordinator</strong> - August 2024 - Present
+                        <p>Overseeing development of IT infrastructure, managing cloud services, and implementing digital solutions to streamline workflows. Successfully led digital transformation projects, enhanced cybersecurity measures, and provided strategic support for high-priority initiatives.</p>
+                    </li>
+                    <li>
+                        <strong>Software Engineer Intern - AI & Web Applications</strong> - Crescent Petroleum, Sharjah (May 2024 - Aug 2024)
+                        <p>Developed AI-based solutions to automate data visualization and reporting using Python, Django, and machine learning. Collaborated on internal tools for data analysis and visualization, helping employees access real-time data insights more efficiently.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>Education</h2>
+                <ul>
+                    <li><strong>University of Sharjah</strong> - Bachelor of Science in Computer Science (Graduating May 2025)</li>
+                    <li><strong>Al Shola Private School</strong> - High School (Graduated June 2021)</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>Projects</h2>
+                <ul>
+                    <li>
+                        <strong>Automated Data Visualization Chatbot</strong>
+                        <p>Built a chatbot leveraging LangChain, Azure Open AI, and PostgreSQL that generates on-demand graphs for project metrics. Replaces traditional data visualization tools by providing instant, automated insights without manual reporting.</p>
+                    </li>
+                    <li>
+                        <strong>Internal Data Monitoring Web Application</strong>
+                        <p>Designed a web application allowing users to select tags and time periods for data retrieval, visualizing trends using Django and KQL. Enabled real-time monitoring for employees to track key metrics over time, enhancing operational awareness.</p>
+                    </li>
+                    <li>
+                        <strong>LLM-Powered Summarization Tool</strong>
+                        <p>Developed an application using Azure OpenAI and MySQL to summarize text retrieved from the database, helping staff quickly review lengthy documents with AI-generated summaries.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Cloud Infrastructure (Azure and AWS)</li>
+                    <li>Project Management (Agile and Waterfall)</li>
+                    <li>Web Development (Django, HTML, JavaScript, CSS)</li>
+                    <li>Machine Learning & Chatbot Development</li>
+                    <li>Office 365 Administration</li>
+                    <li>Programming Languages: Python, Java, C++</li>
+                    <li>Database Management Systems (SQL)</li>
+                    <li>Data Analysis</li>
+                </ul>
+            </section>
         </div>
-    </nav>
-</header>
+    </div>
+
+    <footer>
+        <div class="contact-info">
+            <p>Contact Information:</p>
+            <p>Abdelghani Masad - Email: abed.masad2004@gmail.com | Phone: +971 50 155 4920</p>
+        </div>
+    </footer>
+</body>
+</html>
