@@ -6,22 +6,24 @@
     <title>Portfolio - Abdelghani Masad</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             color: #333;
-            background-color: #f9f9f9;
+            background-color: #f4f4f9;
         }
         header {
-            background-color: #4a6b4a;
+            background-color: #2e8b57;
             padding: 20px;
             text-align: center;
+            color: white;
         }
         header nav a {
             margin: 0 15px;
             text-decoration: none;
             color: white;
             font-size: 18px;
+            font-weight: bold;
         }
         .dropdown {
             display: inline-block;
@@ -30,20 +32,21 @@
         .dropdown-content {
             display: none;
             position: absolute;
-            background-color: #e0e0e0;
+            background-color: #ffffff;
             min-width: 160px;
             box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
             z-index: 1;
         }
         .dropdown-content a {
-            color: #333;
+            color: #2e8b57;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
             text-align: left;
+            font-weight: bold;
         }
         .dropdown-content a:hover {
-            background-color: #4a6b4a;
+            background-color: #2e8b57;
             color: white;
         }
         .dropdown:hover .dropdown-content {
@@ -54,44 +57,64 @@
             padding: 40px;
             max-width: 1200px;
             margin: 0 auto;
+            gap: 30px;
         }
         .profile-pic {
-            width: 180px;
-            height: 180px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
+            border: 3px solid #2e8b57;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
             margin-right: 40px;
-            flex-shrink: 0;
-            border: 1px solid black;
         }
         .content {
             flex: 1;
         }
         h2 {
-            color: #4a6b4a;
-            border-bottom: 2px solid #e0e0e0;
+            color: #2e8b57;
+            border-bottom: 2px solid #ccc;
             padding-bottom: 5px;
+            margin-bottom: 20px;
         }
         ul {
             list-style-type: none;
             padding: 0;
         }
         li {
-            background-color: #e0e0e0;
-            padding: 10px;
-            margin-bottom: 5px;
-            border-radius: 5px;
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        li:hover {
+            transform: scale(1.02);
         }
         .section {
-            margin-top: 20px;
-            font-size: large;
+            margin-top: 30px;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skill-item {
+            background-color: #2e8b57;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
         }
         footer {
-            background-color: #4a6b4a;
+            background-color: #2e8b57;
             color: white;
             text-align: center;
             padding: 20px;
-            bottom: 0;
             width: 100%;
+            position: relative;
         }
         footer .contact-info {
             max-width: 800px;
@@ -107,6 +130,19 @@
         a {
             text-decoration: none;
             color: inherit;
+        }
+        .button {
+            background-color: #2e8b57;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #246b48;
         }
     </style>
 </head>
@@ -137,6 +173,14 @@
             </section>
 
             <section class="section">
+                <h2>Education</h2>
+                <ul>
+                    <li><strong>University of Sharjah</strong> - Bachelor of Science in Computer Science (Graduating May 2025)</li>
+                    <li><strong>Al Shola Private School</strong> - High School (Graduated June 2021)</li>
+                </ul>
+            </section>
+
+            <section class="section">
                 <h2>Experience</h2>
                 <ul>
                     <li>
@@ -151,11 +195,17 @@
             </section>
 
             <section class="section">
-                <h2>Education</h2>
-                <ul>
-                    <li><strong>University of Sharjah</strong> - Bachelor of Science in Computer Science (Graduating May 2025)</li>
-                    <li><strong>Al Shola Private School</strong> - High School (Graduated June 2021)</li>
-                </ul>
+                <h2>Skills</h2>
+                <div class="skills">
+                    <div class="skill-item">Cloud Infrastructure (Azure and AWS)</div>
+                    <div class="skill-item">Project Management (Agile and Waterfall)</div>
+                    <div class="skill-item">Web Development (Django, HTML, JavaScript, CSS)</div>
+                    <div class="skill-item">Machine Learning & Chatbot Development</div>
+                    <div class="skill-item">Office 365 Administration</div>
+                    <div class="skill-item">Programming Languages: Python, Java, C++</div>
+                    <div class="skill-item">Database Management Systems (SQL)</div>
+                    <div class="skill-item">Data Analysis</div>
+                    </div>
             </section>
 
             <section class="section">
@@ -175,26 +225,12 @@
                     </li>
                 </ul>
             </section>
-
-            <section class="section">
-                <h2>Skills</h2>
-                <ul>
-                    <li>Cloud Infrastructure (Azure and AWS)</li>
-                    <li>Project Management (Agile and Waterfall)</li>
-                    <li>Web Development (Django, HTML, JavaScript, CSS)</li>
-                    <li>Machine Learning & Chatbot Development</li>
-                    <li>Office 365 Administration</li>
-                    <li>Programming Languages: Python, Java, C++</li>
-                    <li>Database Management Systems (SQL)</li>
-                    <li>Data Analysis</li>
-                </ul>
-            </section>
         </div>
     </div>
 
     <footer>
         <div class="contact-info">
-            <p>Contact Information:</p>
+            <p>Get in Touch:</p>
             <p>Abdelghani Masad - Email: abed.masad2004@gmail.com | Phone: +971 50 155 4920</p>
         </div>
     </footer>
