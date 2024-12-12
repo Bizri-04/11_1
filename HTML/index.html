@@ -128,6 +128,110 @@
             a {
                 text-decoration: none;
             }
+            /* Dark Mode Styles */
+            body.dark-mode {
+                background-color: #1a1a1a;
+                color: #ffffff;
+            }
+
+            .dark-mode .intro {
+                background-color: #2d2d2d;
+                color: #ffffff;
+            }
+
+            .dark-mode .profile {
+                background-color: #2d2d2d;
+                color: #ffffff;
+            }
+
+            .dark-mode h2 {
+                color: #4CAF50;
+            }
+
+            .dark-mode p {
+                color: #ffffff;
+            }
+
+            /* Theme Switch Styles */
+            .theme-switch-wrapper {
+                display: flex;
+                align-items: center;
+                position: absolute;
+                right: 20px;
+                top: 20px;
+            }
+
+            .theme-switch {
+                display: inline-block;
+                height: 34px;
+                position: relative;
+                width: 60px;
+            }
+
+            .theme-switch input {
+                display: none;
+            }
+
+            .slider {
+                background-color: #ccc;
+                bottom: 0;
+                cursor: pointer;
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+                transition: .4s;
+                border-radius: 34px;
+            }
+
+            .slider:before {
+                background-color: #fff;
+                bottom: 4px;
+                content: "";
+                height: 26px;
+                left: 4px;
+                position: absolute;
+                transition: .4s;
+                width: 26px;
+                border-radius: 50%;
+            }
+
+            input:checked + .slider {
+                background-color: #2e8b57;
+            }
+
+            input:checked + .slider:before {
+                transform: translateX(26px);
+            }
+
+            .theme-switch-wrapper em {
+                margin-left: 10px;
+                font-size: 1rem;
+                color: white;
+            }
+
+            /* Additional Dark Mode Compatibility */
+            .dark-mode .dropdown-content {
+                background-color: #2d2d2d;
+            }
+
+            .dark-mode .dropdown-content a {
+                color: #ffffff;
+            }
+
+            .dark-mode .dropdown-content a:hover {
+                background-color: #2e8b57;
+                color: white;
+            }
+
+            .dark-mode .choose {
+                color: #4CAF50;
+            }
+
+            .dark-mode footer {
+                background-color: #2e8b57;
+            }
+
         </style>
     </head>
     <body>
@@ -143,8 +247,17 @@
                         <a href="ahmad.html">Ahmad Allan</a>
                     </div>
                 </div>
+                <a href="checker.html">GPA Checker</a>
             </nav>
         </header>
+
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider"></div>
+            </label>
+            <em>Dark Mode</em>
+        </div>
 
         <div class="intro">
             <h2>About Us</h2>
@@ -181,5 +294,30 @@
                 <p>Ahmad Allan - Email: ahmad.allan@example.com | Phone: +971 50 456 7890</p>
             </div>
         </footer>
+
+        <script>
+            const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+            const currentTheme = localStorage.getItem('theme');
+
+            if (currentTheme) {
+                document.documentElement.setAttribute('data-theme', currentTheme);
+                if (currentTheme === 'dark') {
+                    toggleSwitch.checked = true;
+                    document.body.classList.add('dark-mode');
+                }
+            }
+
+            function switchTheme(e) {
+                if (e.target.checked) {
+                    document.body.classList.add('dark-mode');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    document.body.classList.remove('dark-mode');
+                    localStorage.setItem('theme', 'light');
+                }    
+            }
+
+            toggleSwitch.addEventListener('change', switchTheme, false);
+        </script>
     </body>
 </html>
